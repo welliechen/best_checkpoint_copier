@@ -3,7 +3,7 @@
 使用tf.estimator.train_and_evaluate(estimator, train_spec, eval_spec)训练模型，设置epoch后，训练能够报错的模型只是最后几轮的checkpoints，而不是保存效果最佳的checkpoints，比如loss最小或者acc最大等等，实现这个exporter就是能够满足保存最佳模型的需求。
 
 使用方式如下：
-     best_exporter = best_checkpoint_copier.BestCheckpointCopier(
+    best_exporter = best_checkpoint_copier.BestCheckpointCopier(
                         name='best', # directory within model directory to copy checkpoints to
                         checkpoints_to_keep=5, # number of checkpoints to keep
                         score_metric='loss', # eval_result metric to use to determine "best"
